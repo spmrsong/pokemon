@@ -23,7 +23,7 @@ function Dex() {
   };
 
   const pokemonDetail = (id) => {
-    navigate(`/pokemon-detail/${id}`);
+    navigate(`/pokemon-detail?id=${id}`);
   };
 
   return (

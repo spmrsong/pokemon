@@ -1,6 +1,6 @@
 // PokemonDetail.jsx
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import MOCK_DATA from "../mock";
 import styled from "styled-components";
 
@@ -8,13 +8,13 @@ const DetailStyle = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding: 250px;
 `;
 
 function PokemonDetail() {
-  const { id } = useParams();
-  const pokemonId = parseInt(id, 10);
-
+  const location = useLocation();
+  const params = new URLSearchParams(location.search);
+  const pokemonId = parseInt(params.get("id"), 10);
   const pokemon = MOCK_DATA.find((p) => p.id === pokemonId);
 
   if (!pokemon) {

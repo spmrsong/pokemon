@@ -15,7 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Dex" element={<Dex />} />
-          <Route path="/pokemon-detail/:id" element={<PokemonDetail />} />
+          <Route path="/pokemon-detail" element={<PokemonDetail />} />
         </Routes>
       </BrowserRouter>
     </PokemonContext.Provider>
