@@ -12,6 +12,8 @@ function Dex() {
   const addPokemon = (pokemon) => {
     if (!selectedPokemon.some((p) => p.id === pokemon.id)) {
       setSelectedPokemon([...selectedPokemon, pokemon]);
+    } else {
+      alert("이미 선택된 포켓몬 입니다.");
     }
   };
 
